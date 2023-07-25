@@ -12,12 +12,13 @@ const pool = mysql.createPool({
 
 module.exports = pool;
 
-// const pool = require('./connection');
 
 function getAllDepartments() {
   return new Promise((resolve, reject) => {
     pool.query('SELECT * FROM department', (err, results) => {
       if (err) reject(err);
+    //   console.log("***** Get all depts results *****")
+    //   console.log(results);
       resolve(results);
     });
   });

@@ -30,19 +30,24 @@ function start() {
       switch (answer.action) {
         case 'View all departments':
           getAllDepartments().then((departments) => {
-            console.table('Departments:', departments);
+            //console.log("***** Get all depts departments *****")
+            // map
+            console.log("Departments");
+            console.table(departments);
             start();
           });
           break;
         case 'View all roles':
           getAllRoles().then((roles) => {
-            console.table('Roles:', roles);
+            console.log("Roles");
+            console.table(roles)
             start();
           });
           break;
         case 'View all employees':
           getAllEmployees().then((employees) => {
-            console.table('Employees:', employees);
+            console.log("Employees");
+            console.table(employees)
             start();
           });
           break;
